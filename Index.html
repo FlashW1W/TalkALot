@@ -15,7 +15,7 @@
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <a onclick="document.getElementById('id01').style.display='block'">Login</a>
-                <a href="#">Register</a>
+                <a onclick="document.getElementById('id02').style.display='block'">Registo</a>
             </div>
 
             <span style="font-size:30px;cursor:pointer;float:right;margin-right:10px;color:white" onclick="openNav()">&#9776; </span>
@@ -25,7 +25,7 @@
                 <form class="modal-content animate" action="/action_page.php">
                     <div class="imgcontainer">
                         <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                        <img src="img_avatar2.png" alt="Avatar" class="avatar">
+                        <img src="../Images/Login.png" alt="Avatar" class="avatar">
                     </div>
 
                     <div class="container">
@@ -41,12 +41,51 @@
                         </label>
                     </div>
 
+                    
+
                     <div class="container" style="background-color:#f1f1f1">
                         <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
                         <span class="psw">Forgot <a href="#">password?</a></span>
                     </div>
                 </form>
             </div>
+
+            <div id="id02" class="modal">
+
+                <form class="modal-content animate" action="/action_page.php">
+                    <div class="imgcontainer">
+                        <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+                        <img src="../Images/registo.snv" alt="Avatar" class="avatar">
+                    </div>
+
+                    <div class="container">
+                        <label for="uname"><b>Username</b></label>
+                        <input type="text" placeholder="Enter Username" name="uname" required>
+
+                        <label for="id"><b>Número de Identificação</b></label>
+                        <input type="text" placeholder="Enter Id" name="Id" required>
+                        
+                        <label for="mail"><b>E-mail</b></label>
+                        <input type="text" placeholder="Enter E-mail" name="mail" required>
+
+                        <label for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" required>
+
+                        <button type="submit">Login</button>
+                        <label>
+                            <input type="checkbox" checked="checked" name="remember"> Remember me
+                        </label>
+                    </div>
+
+                    
+
+                    <div class="container" style="background-color:#f1f1f1">
+                        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                        <span class="psw">Forgot <a href="#">password?</a></span>
+                    </div>
+                </form>
+            </div>
+
         </div>
         <div class="header">
             <h1 class="animated fadeInUp" id="med">Mediateca</h1>
