@@ -1,4 +1,63 @@
-﻿.sidenav {
+﻿body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.bg {
+    /* The image used */
+    background-image: url("../Images/background.png");
+    /* Full height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#logo {
+    -webkit-animation-duration: 1s;
+    -webkit-animation-delay: 0.3s;
+}
+
+#med {
+    -webkit-animation-delay: 0.5s;
+}
+
+#lrm {
+    -webkit-animation-delay: 1s;
+}
+
+header {
+    height: 10em;
+    position: relative
+}
+
+h1 {
+    margin: 0;
+    font-size: 100px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+h3 {
+    margin: 0;
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    position: absolute;
+    top: 60%;
+    left: 35%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+   
+
+.sidenav {
     height: 100%;
     width: 0;
     position: fixed;
