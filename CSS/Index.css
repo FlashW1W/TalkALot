@@ -139,6 +139,11 @@ button {
     position: relative;
 }
 
+.avatar {
+    width: 20%;
+    height: 20%;
+}
+
 
 .container {
     padding: 16px;
