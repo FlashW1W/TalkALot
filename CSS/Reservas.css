@@ -1,0 +1,24 @@
+﻿table {
+    
+}
+
+tr {
+
+}
+
+td {
+    width:100px;
+    height:100px;
+    outline: solid;
+    text-align:center
+}
+
+button {
+    width:99%;
+    height:99%;
+    border:none;
+    background-color:transparent;
+    background:none;
+    outline:none
+}
+

@@ -1,2 +1,0 @@
-# TalkALot
-Projeto IOT
