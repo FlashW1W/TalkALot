@@ -1,13 +1,13 @@
 ﻿td {
-    width:90px;
-    height:60px;
+    width:100px;
+    height:30px;
     outline: solid;
     text-align:center
 }
 
 button {
-    width:99%;
-    height:99%;
+    width:100%;
+    height:98%;
     border:none;
     background-color:transparent;
     background:none;
