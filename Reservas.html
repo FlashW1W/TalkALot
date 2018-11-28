@@ -21,24 +21,21 @@
         <form class="modal-content animate" action="/action_page.php">
             <div class="imgcontainer">
                 <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                <img src="../TalkALot/Images/Login.png" alt="Avatar" class="avatar">
-            </div>
+                    </div>
             <div class="container">
-                <label for="uname"><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" name="uname" required>
+                <p class="confirmação">
+                    Reserva no dia X, Terça-Feira pelas 9h até às 10h.
+                </p>
 
-                <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
+                <button class="confirmação_button" style="padding: right 100px;">
+                    Confirmar
+                </button>
+                <button class="confirmação_button">
+                    Cancelar
+                </button>
 
-                <button type="submit" class="login">Login</button>
-                <label>
-                    <input type="checkbox" checked="checked" name="remember"> Remember me
-                </label>
             </div>
-            <div class="container" style="background-color:#f1f1f1">
-                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-                <span class="psw">Forgot <a href="#">password?</a></span>
-            </div>
+            
         </form>
     </div>
 
@@ -64,8 +61,8 @@
         </tr>
         <tr>
             <td>9h-10h</td>
-            <td><button onclick="parent.location='Index.html'"></button></td>
-            <td><button onclick="document.getElementById('id01').style.display='block'"></button></td>
+            <td><button class="celula" onclick="parent.location='Index.html'"></button></td>
+            <td><button class="celula" onclick="document.getElementById('id01').style.display='block'"></button></td>
             <td></td>
             <td></td>
             <td></td>
