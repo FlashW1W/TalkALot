@@ -24,7 +24,7 @@
 }
 #lingua
 {
-    -webkit-animation-delay: 0.8 s;
+    -webkit-animation-delay: 0.8s;
 }
 
 #lrm {
@@ -34,6 +34,10 @@
 header {
     height: 10em;
     position: relative
+}
+label
+{
+font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
@@ -125,10 +129,10 @@ span.psw {
     top: 0;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
+    overflow:auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    padding-top: 60px;
+   
 }
 
 /* Modal Content/Box */
@@ -136,7 +140,8 @@ span.psw {
     background-color: #fefefe;
     margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
     border: 1px solid #888;
-    width: 60%; /* Could be more or less, depending on screen size */
+    width: 40%; /* Could be more or less, depending on screen size */
+   
 }
 
 /* The Close Button (x) */
@@ -232,8 +237,12 @@ table {
 .vl {
     border-left: 2px solid white;
     height: 30px;
+    -webkit-animation-delay: 0.5s;
 }
 #language
 {
 font-family:arial;
+}
+a{
+    font-family: Arial, Helvetica, sans-serif;
 }
