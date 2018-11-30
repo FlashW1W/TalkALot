@@ -22,6 +22,10 @@
 #med {
     -webkit-animation-delay: 0.5s;
 }
+#lingua
+{
+    -webkit-animation-delay: 0.8 s;
+}
 
 #lrm {
     -webkit-animation-delay: 1s;
@@ -221,4 +225,15 @@ table {
     position: relative;
     text-align: center;
     color: white;
+}
+
+/*codigoo das imagens para selecionar a lingua*/
+
+.vl {
+    border-left: 2px solid white;
+    height: 30px;
+}
+#language
+{
+font-family:arial;
 }
