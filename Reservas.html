@@ -21,11 +21,12 @@
         <form class="modal-content animate" action="/action_page.php">
             <div class="imgcontainer">
                 <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                    </div>
-            <div class="container">
                 <p class="confirmação">
                     Reserva no dia X, Terça-Feira pelas 9h até às 10h.
                 </p>
+            </div>
+            <div class="container">
+
 
                 <button class="confirmação_button" style="margin-left:240px; margin-right:50px">
                     Confirmar
@@ -39,11 +40,14 @@
         </form>
     </div>
 
-    <select>
-        <option>Sala 1</option>
-        <option>Sala 2</option>
-        <option>Sala 3</option>
-    </select>
+    <div class="dropdown">
+        <button class="dropbtn">Salas</button>
+        <div class="dropdown-content">
+            <a href="#">Sala 1</a>
+            <a href="#">Sala 2</a>
+            <a href="#">Sala 3</a>
+        </div>
+    </div>
 
     <br />
     <br />
@@ -61,8 +65,8 @@
         </tr>
         <tr>
             <td>9h-10h</td>
-            <td><button class="celula" onclick="parent.location='Index.html'"></button></td>
             <td><button class="celula" onclick="document.getElementById('id01').style.display='block'"></button></td>
+            <td style="background-color:red"><button class="celula" onclick="document.getElementById('id01').style.display='block'"></button></td>
             <td></td>
             <td></td>
             <td></td>
