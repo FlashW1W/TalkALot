@@ -11,44 +11,13 @@
 <body>
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a onclick="document.getElementById('id01').style.display='block'">Login</a>
-        <a onclick="document.getElementById('id02').style.display='block'">Registo</a>
+        <a onclick="document.getElementById('id01').style.display='block'">Perfil</a>
+        <a onclick="document.getElementById('id02').style.display='block'">Grupos</a>
+        <a onclick="document.getElementById('id02').style.display='block'">Minhas Reservas</a>
+        <a onclick="document.getElementById('id02').style.display='block'">Ajuda</a>
     </div>
-
     <span style="font-size:40px;cursor:pointer;float:right;margin-right:10px;color:black" onclick="openNav()">&#9776; </span>
-
-    <div id="id01" class="modal">
-        <form class="modal-content animate" action="/action_page.php">
-            <div class="imgcontainer">
-                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                <p class="confirmação">
-                    Reserva no dia X, Terça-Feira pelas 9h até às 10h.
-                </p>
-            </div>
-            <div class="container">
-
-
-                <button class="confirmação_button" style="margin-left:240px; margin-right:50px">
-                    Confirmar
-                </button>
-                <button class="confirmação_button">
-                    Cancelar
-                </button>
-
-            </div>
-            
-        </form>
-    </div>
-
-    <div class="dropdown">
-        <button class="dropbtn">Salas</button>
-        <div class="dropdown-content">
-            <a href="#">Sala 1</a>
-            <a href="#">Sala 2</a>
-            <a href="#">Sala 3</a>
-        </div>
-    </div>
-
+    <h1 class="tt">Reserva das Salas</h1>
     <br />
     <br />
     <br />
@@ -65,8 +34,8 @@
         </tr>
         <tr>
             <td>9h-10h</td>
-            <td><button class="celula" onclick="document.getElementById('id01').style.display='block'"></button></td>
-            <td style="background-color:red"><button class="celula" onclick="document.getElementById('id01').style.display='block'"></button></td>
+            <td></td>
+            <td></td>
             <td></td>
             <td></td>
             <td></td>
@@ -145,6 +114,51 @@
             <td></td>
         </tr>
     </table>
-
+</br>
+</br>
+</br>
+</br>
+<p class="tx">Pesquisar Reserva:</p>
+</br>
+    <select class="cx">
+        <option value="----">Dias</option>
+            <option value="2f">Segunda-Feira</option>
+            <option value="3f">Terça-Feira</option>
+            <option value="4f">Quarta-Feira</option>
+            <option value="5f">Quinta-Feira</option>
+            <option value="6f">Sexta-Feira</option>
+            <option value="Sf">Sábado</option>
+    </select>
+    <select class="cd">
+        <option value="----">Salas</option>
+        <option value="S1">Sala1</option>
+        <option value="S2">Sala2</option>
+        <option value="S3">Sala3</option>
+    </select>
+    <button class="btn">Pesquisar</button>
+</br>
+</br>
+</br>
+</br>
+</br>
+<p class="tx">Inserir Reserva:</p>
+</br>
+<select class="cx">
+        <option value="----">Dias</option>
+            <option value="2f">Segunda-Feira</option>
+            <option value="3f">Terça-Feira</option>
+            <option value="4f">Quarta-Feira</option>
+            <option value="5f">Quinta-Feira</option>
+            <option value="6f">Sexta-Feira</option>
+            <option value="Sf">Sábado</option>
+    </select>
+    <select class="cd">
+        <option value="----">Salas</option>
+        <option value="S1">Sala1</option>
+        <option value="S2">Sala2</option>
+        <option value="S3">Sala3</option>
+    </select>
+    <button class="btn">Reservar</button>
+</br>    
 </body>
 </html>
