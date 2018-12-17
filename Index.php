@@ -42,7 +42,7 @@ ul {
          <div class="head">
          <ul>
   <li><a class="active" href="../TalkALot/index_login.php">LOGIN</a></li>
-  <li><a href="#news">REGISTER</a></li>
+  <li><a href="Register.php">REGISTER</a></li>
   </ul>
 
             <img src="../TalkALot/Images/logo-ESTS.png" class="animated fadeIn" id="logo" style="margin-top:-40px">

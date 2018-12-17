@@ -1,6 +1,39 @@
-﻿<?php
-    include "Register.php";
+﻿<?php 
+mysql_connect('localhost', 'root', '');
+mysql_select_db('lrm_v2');
+
+function queryTIPO(){
+
+    $sql = "SELECT tip_uti_descricao FROM tipo_utilizador";
+    $result = mysql_query($sql);
+    
+    echo "<select name='descricao'>";
+    while ($row = mysql_fetch_array($result)) {
+        echo "<option value='" . $row['tip_uti_descricao'] ."'>" . $row['tip_uti_descricao'] ."</option>";
+    }
+    echo "</select>";
+
+}
+
+function queryCURSO(){
+
+    $sql = "SELECT cur_nome FROM curso";
+    $result = mysql_query($sql);
+    
+    
+    echo "<select name='curso'> ";
+    while ($row = mysql_fetch_array($result)) {
+
+        echo "<option value='" . $row['cur_nome'] ."'>" . $row['cur_nome'] ."</option>";
+    }
+    echo "</select>";
+
+}
+
+
+
 ?>
+
 <html>
 <head>    
     <meta charset="utf-8" />
@@ -10,7 +43,16 @@
 </head>
 <style type="text/css">
 
-
+}
+         .actionbutton {
+   border: none;
+  color: white;
+  padding: 8px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
 
 </style>
 <body>
@@ -18,8 +60,9 @@
      <img src="../TalkALot/Images/logo-ESTS.png" class="animated fadeIn" id="logo">
 
      <div align="center">
-         <b class="title" style="font-size:42px;">Mediateca</b><br><br>
-         <b class="title" style="font-size:14px;">Library Room Management</b><br><br>
+     <b style="font-size:42px;font-family: Verdana, Geneva, Tahoma, sans-serif;color: white;text-shadow: 2px 2px 4px #000000" >Mediateca</b><br><br>
+           <b  style="font-size:14px;font-family: Verdana, Geneva, Tahoma, sans-serif;color: white;text-shadow: 2px 2px 4px #000000">Library Room Management</b><br><br>
+
 
          <div class="head" style = "width:800px;background-color:white;color:black;border-radius:13px;">
             <div style = "padding:3px;"><b style="font-size:19px">Register</b></div>
@@ -41,14 +84,10 @@
                             <input type = "text" name = "uname" class = "box"/>     
                         </td> 
                         <td>
-                            <input type = "password" name = "psw" class = "box" />
+                            <input type = "Date" name = "psw"  value="" class = "box" style="width:206px;height:41px;font-size:18px;border:1px solid #ccc;" />
                         </td>
                         <td>
-                            <select>
-                              <option value="">PWDAM</option>
-                              <option value="">QAA</option>
-                              <option value="">Outra coisa</option>
-                          </select>
+                            <?php queryCURSO    (); ?>
                       </td>
                   </tr>
                   <tr>
@@ -76,17 +115,13 @@
                 </tr>
                 <tr>
                   <td>
-                    <input type = "text" name = "uname" class = "box"/>  
+                    <input type = "text" name = "uname" class = "box" />  
                 </td>
                 <td> 
-                    <select>
-                      <option value="">Aluno</option>
-                      <option value="">Docente</option>
-                      <option value="">Professor</option>
-                  </select>
+                <?php queryTIPO(); ?>
               </td>
               <td> 
-                <input type = "submit" value = " Submit" style="border-radius:3px;background-color:green;color:white;height:20px;width:80px;border-decoration:none;"/><br /><br><br> </td>
+                <input type = "submit" value = " Submit" class="actionbutton" style="float:right"/><br /><br><br> </td>
             </tr>
         </table>
     </form>
@@ -100,4 +135,5 @@
 </div>
 </div>
 </body>
+
 </html>
