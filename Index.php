@@ -40,12 +40,12 @@ ul {
 
       <div class="bg">
          <div class="head">
-         <ul>
+         <ul style="position:fixed;top: 0;right:0;">
   <li><a class="active" href="../TalkALot/index_login.php">LOGIN</a></li>
   <li><a href="Register.php">REGISTER</a></li>
   </ul>
 
-            <img src="../TalkALot/Images/logo-ESTS.png" class="animated fadeIn" id="logo" style="margin-top:-40px">
+            <img src="../TalkALot/Images/logo-ESTS.png" class="animated fadeIn" id="logo">
 
            
             

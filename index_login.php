@@ -55,7 +55,7 @@ ul {
    <div class="bg">
    <img src="../TalkALot/Images/logo-ESTS.png" class="animated fadeIn" id="logo">
    
-   <ul>
+   <ul style="position:fixed;top: 0;right:0;">
   <li><a class="active" href="../TalkALot/index_login.php">LOGIN</a></li>
   <li><a href="#news">REGISTER</a></li>
   </ul>
@@ -71,7 +71,7 @@ ul {
             
             <div style = "margin:30px">
 
-               <form action = "login.php" method = "post">
+               <form action = "../TALKALOT/PHP/login.php" method = "post">
                   <label  class = "animated fadeInUp">UserName  :</label><input type = "text" name = "uname" class = "box animated fadeInUp"/><br /><br />
                   <label class = "animated fadeInUp">Password  :</label><input type = "password" name = "psw" class = "box animated fadeInUp" /><br/><br /><br />
                   <input type="Button" value = " Voltar" class="actionbutton animated fadeInLeft" style=" background-color: red;float:left;"/>
