@@ -1,14 +1,13 @@
 ﻿<?php 
-mysql_connect('localhost', 'root', '');
-mysql_select_db('lrm_v2');
-
 function queryTIPO(){
+    $db = mysqli_connect('localhost', 'root', '', 'lrm_v2');
 
     $sql = "SELECT tip_uti_descricao FROM tipo_utilizador";
-    $result = mysql_query($sql);
+    $result = mysqli_query($db, $sql);;
     
-    echo "<select name='descricao'>";
-    while ($row = mysql_fetch_array($result)) {
+    echo "<select name='cargo'>";
+    echo "<option></option>";
+    while ($row = mysqli_fetch_array($result)) {
         echo "<option value='" . $row['tip_uti_descricao'] ."'>" . $row['tip_uti_descricao'] ."</option>";
     }
     echo "</select>";
@@ -16,13 +15,15 @@ function queryTIPO(){
 }
 
 function queryCURSO(){
+    $db = mysqli_connect('localhost', 'root', '', 'lrm_v2');
 
-    $sql = "SELECT cur_nome FROM curso";
-    $result = mysql_query($sql);
+    $sql = "SELECT cur_nome FROM curso ORDER BY cur_id";
+    $result = mysqli_query($db, $sql);
     
     
     echo "<select name='curso'> ";
-    while ($row = mysql_fetch_array($result)) {
+    echo "<option></option>";
+    while ($row = mysqli_fetch_array($result)) {
 
         echo "<option value='" . $row['cur_nome'] ."'>" . $row['cur_nome'] ."</option>";
     }
@@ -33,7 +34,7 @@ function queryCURSO(){
 
 
 ?>
-
+<?php include('phpregister.php') ?>
 <html>
 <head>    
     <meta charset="utf-8" />
@@ -69,7 +70,8 @@ function queryCURSO(){
 
             <div style = "margin:5px">
 
-             <form action = "Register.php" method = "post">
+             <form action = "register.php" method = "post">
+              <?php include('errors.php'); ?>
                 <table>
                     <tr>
                       <td>
@@ -81,13 +83,13 @@ function queryCURSO(){
                     </tr>
                     <tr>
                         <td>
-                            <input type = "text" name = "uname" class = "box"/>     
+                            <input type = "text" name = "idnumb" class = "box"/>     
                         </td> 
                         <td>
-                            <input type = "Date" name = "psw"  value="" class = "box" style="width:206px;height:41px;font-size:18px;border:1px solid #ccc;" />
+                            <input type = "Date" name = "datanas"  value="" class = "box" style="width:206px;height:41px;font-size:18px;border:1px solid #ccc;" />
                         </td>
                         <td>
-                            <?php queryCURSO    (); ?>
+                            <?php queryCURSO    (); ?>  
                       </td>
                   </tr>
                   <tr>
@@ -97,12 +99,18 @@ function queryCURSO(){
                     <td>
                         <label>Email</label>
                     </td>
+                                        <td>
+                        <label>Password</label>
+                    </td>
                 </tr>
                 <tr>
                     <td>
                         <input type = "text" name = "uname" class = "box"/>  
                     </td>    
                     <td> 
+                        <input type = "text" name = "email" class = "box" />
+                    </td>
+                                        <td> 
                         <input type = "password" name = "psw" class = "box" />
                     </td>
                     <tr>
@@ -115,13 +123,13 @@ function queryCURSO(){
                 </tr>
                 <tr>
                   <td>
-                    <input type = "text" name = "uname" class = "box" />  
+                    <input type = "text" name = "name" class = "box" />  
                 </td>
                 <td> 
-                <?php queryTIPO(); ?>
+                <?php queryTIPO(); ?> 
               </td>
               <td> 
-                <input type = "submit" value = " Submit" class="actionbutton" style="float:right"/><br /><br><br> </td>
+                <input type = "submit" value = "Submit" class="actionbutton" name="reg_user" style="float:right"/><br /><br><br> </td>
             </tr>
         </table>
     </form>
