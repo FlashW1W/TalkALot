@@ -100,26 +100,38 @@ if (is_numeric($idnumber)) {}
   // Finally, register user if there are no errors in the form
   if (count($errors) == 0) {
 
+    $querycurid = "SELECT cur_id FROM curso WHERE cur_nome = '$curso'";
+    $curid = mysql_query($querycurid);
+
+    $querytipouti = "SELECT id_tipo_utilizador FROM tipo_utilizador WHERE tip_uti_descricao = '$cargo'";
+    $tipouti = mysql_query($querytipouti);
+
+    $queryutiid = "SELECT max(id_utilizador) FROM utilizador";
+    $utiid = mysql_query($queryutiid);
+
   	$query = "INSERT INTO login (username, password) 
   			  VALUES('$username', '$password')";
 
-  	$querycurid = "SELECT cur_id FROM curso WHERE cur_nome = $curso";
-  	$curid = mysql_query($querycurid);
+    $queryutilizador = "INSERT INTO utilizador (id_utilizador,uti_username,uti_id_tipo_utilizador) 
+    VALUES( '' , '$username','$tipouti' )";
 
-  	$queryaluno = "INSERT INTO aluno (alu_id, alu_nome, alu_email, alu_data_dnsc, alu_cur_id) 
-  			  VALUES('$idnumber', '$name', '$email', '$datanascimento', '$curid')";
-
-  	$queryprofessor = "INSERT INTO professor (prof_id, prof_nome, prof_email, prof_data_dnsc) 
-  			  VALUES('$idnumber', '$name', '$email', '$datanascimento')";
+  	$queryaluno = "INSERT INTO aluno (alu_id,alu_id_utilizador, alu_nome, alu_email, alu_data_dnsc, alu_cur_id) 
+          VALUES('$idnumber','$utiid','$name', '$email', '$datanascimento', '$curid')";
+          
+    
+  	$queryprofessor = "INSERT INTO professor (prof_id, prof_id_utilizador,prof_nome, prof_email, prof_data_dnsc) 
+  			  VALUES('$idnumber', '$utiid', '$name', '$email', '$datanascimento')";
 
   if ($cargo == 'Aluno') {
     mysqli_query($db, $query);
+    mysqli_query($db, $queryutilizador);
     mysqli_query($db, $queryaluno);
   	header('location: index_login.php');
 	mysqli_close($db);
 }
 else {
-	mysqli_query($db, $query);
+  mysqli_query($db, $query);
+     mysqli_query($db, $queryutilizador);
     mysqli_query($db, $queryprofessor);
   	header('location: index_login.php');
 	mysqli_close($db);
