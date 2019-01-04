@@ -1,3 +1,4 @@
+<<<<<<< HEAD:Register.html
 <<<<<<< HEAD
 <<<<<<< HEAD
 ﻿<?php
@@ -6,6 +7,8 @@
 <<<<<<< HEAD:Register.html
 ﻿<html>
 =======
+=======
+>>>>>>> parent of faabe62... Merge branch 'master' of https://github.com/FlashW1W/TalkALot:Register.php
 ﻿<?php 
 function queryTIPO(){
     $db = mysqli_connect('localhost', 'root', '', 'lrm_v2');
@@ -45,6 +48,7 @@ function queryCURSO(){
 ?>
 <?php include('phpregister.php') ?>
 <html>
+<<<<<<< HEAD:Register.html
 <<<<<<< HEAD
 =======
 ﻿<html>
@@ -52,6 +56,8 @@ function queryCURSO(){
 =======
 >>>>>>> 073b67f05bab4797c84174c0042126e3dffc15f0:Register.php
 >>>>>>> parent of 283a2ac... Recovery 04/01/2018
+=======
+>>>>>>> parent of faabe62... Merge branch 'master' of https://github.com/FlashW1W/TalkALot:Register.php
 <head>    
     <meta charset="utf-8" />
     <title>Register Page</title>
@@ -60,7 +66,16 @@ function queryCURSO(){
 </head>
 <style type="text/css">
 
-
+}
+         .actionbutton {
+   border: none;
+  color: white;
+  padding: 8px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
 
 </style>
 <body>
@@ -68,14 +83,16 @@ function queryCURSO(){
      <img src="../TalkALot/Images/logo-ESTS.png" class="animated fadeIn" id="logo">
 
      <div align="center">
-         <b class="title" style="font-size:42px;">Mediateca</b><br><br>
-         <b class="title" style="font-size:14px;">Library Room Management</b><br><br>
+     <b style="font-size:42px;font-family: Verdana, Geneva, Tahoma, sans-serif;color: white;text-shadow: 2px 2px 4px #000000" >Mediateca</b><br><br>
+           <b  style="font-size:14px;font-family: Verdana, Geneva, Tahoma, sans-serif;color: white;text-shadow: 2px 2px 4px #000000">Library Room Management</b><br><br>
+
 
          <div class="head" style = "width:800px;background-color:white;color:black;border-radius:13px;">
             <div style = "padding:3px;"><b style="font-size:19px">Register</b></div>
 
-            <div style = "margin:10px">
+            <div style = "margin:5px">
 
+<<<<<<< HEAD:Register.html
 <<<<<<< HEAD
 <<<<<<< HEAD
              <form action = "Register.php" method = "post">
@@ -90,6 +107,10 @@ function queryCURSO(){
               <?php include('errors.php'); ?>
 >>>>>>> 073b67f05bab4797c84174c0042126e3dffc15f0:Register.php
 >>>>>>> parent of 283a2ac... Recovery 04/01/2018
+=======
+             <form action = "register.php" method = "post">
+              <?php include('errors.php'); ?>
+>>>>>>> parent of faabe62... Merge branch 'master' of https://github.com/FlashW1W/TalkALot:Register.php
                 <table>
                     <tr>
                       <td>
@@ -104,21 +125,10 @@ function queryCURSO(){
                             <input type = "text" name = "idnumb" class = "box"/>     
                         </td> 
                         <td>
-<<<<<<< HEAD:Register.html
-                            <input type = "password" name = "psw" class = "box" />
-                        </td>
-                        <td>
-                            <select>
-                              <option value="">PWDAM</option>
-                              <option value="">QAA</option>
-                              <option value="">Outra coisa</option>
-                          </select>
-=======
                             <input type = "Date" name = "datanas"  value="" class = "box" style="width:206px;height:41px;font-size:18px;border:1px solid #ccc;" />
                         </td>
                         <td>
                             <?php queryCURSO    (); ?>  
->>>>>>> 073b67f05bab4797c84174c0042126e3dffc15f0:Register.php
                       </td>
                   </tr>
                   <tr>
@@ -152,19 +162,6 @@ function queryCURSO(){
                 </tr>
                 <tr>
                   <td>
-<<<<<<< HEAD:Register.html
-                    <input type = "text" name = "uname" class = "box"/>  
-                </td>
-                <td> 
-                    <select>
-                      <option value="">Aluno</option>
-                      <option value="">Docente</option>
-                      <option value="">Professor</option>
-                  </select>
-              </td>
-              <td> 
-                <input type = "submit" value = " Submit" style="border-radius:3px;background-color:green;color:white;height:20px;width:80px;border-decoration:none;"/><br /><br><br> </td>
-=======
                     <input type = "text" name = "name" class = "box" />  
                 </td>
                 <td> 
@@ -172,7 +169,6 @@ function queryCURSO(){
               </td>
               <td> 
                 <input type = "submit" value = "Submit" class="actionbutton" name="reg_user" style="float:right"/><br /><br><br> </td>
->>>>>>> 073b67f05bab4797c84174c0042126e3dffc15f0:Register.php
             </tr>
         </table>
     </form>
@@ -186,4 +182,5 @@ function queryCURSO(){
 </div>
 </div>
 </body>
+
 </html>
