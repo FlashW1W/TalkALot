@@ -21,7 +21,8 @@ function groupName(){
     $rowgroupname = mysqli_fetch_array($resgroupname);
     $groupname = $rowgroupname['grup_nome'];
 
-    echo $groupname;
+    echo "<button style='border-radius:13px'>".$groupname."</button>";
+
 }
 ?>
 <html>
@@ -85,9 +86,9 @@ ul {
 
 
          <div class="head animated fadeIn" style = "width:400px;background-color:white;color:black;border-radius:13px;" align = "center">
-            <div style = "padding:3px;"><b style="font-size:19px">Login</b></div>
+            <div style = "padding:3px;"><b style="font-size:19px">Grupos</b></div>
             
-            <div style = "margin:30px">
+            <div style = "margin:30px; margin-top: 0px">
 
 <?php groupName(); ?> 
 
