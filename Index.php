@@ -7,27 +7,10 @@
       <link rel="stylesheet" type="text/css" href="../TalkALot/CSS/SideMenu.css">
       <script src="../TalkALot/JS/Index.js"></script>
       <script src="../TalkALot/JS/SideMenu.js"></script>
+
 <style>
 
-.header2 {
-  height: 60px; 
-  background-color: rgba(0,0,0,0.5);
-  position: fixed;
-  top: 200;
-  width: 100%;
-  transition: all 0.5s;
-}
-
-
-.header2-alt {
-  height: 100px;
-  background-color: rgba(0,0,0, 0.8);
-  position: fixed;
-  top: 200;
-  width: 100%;
-  transition: all 0.5s;
-}
-
+        
 ul {
     list-style-type: none;
     margin: 0;
@@ -57,12 +40,12 @@ ul {
 
       <div class="bg">
          <div class="head">
-         <ul style="position:fixed;top: 0;right:0;" class="header2">
+         <ul>
   <li><a class="active" href="../TalkALot/index_login.php">LOGIN</a></li>
-  <li><a href="Register.php">REGISTER</a></li>
+  <li><a href="#news">REGISTER</a></li>
   </ul>
 
-            <img src="../TalkALot/Images/logo-ESTS.png" class="animated fadeIn" id="logo">
+            <img src="../TalkALot/Images/logo-ESTS.png" class="animated fadeIn" id="logo" style="margin-top:-40px">
 
            
             
