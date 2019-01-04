@@ -1,15 +1,3 @@
-<<<<<<< HEAD:Register.php
-<<<<<<< HEAD:Register.html
-<<<<<<< HEAD
-<<<<<<< HEAD
-﻿<?php
-    include "Register.php";
-=======
-<<<<<<< HEAD:Register.html
-﻿<html>
-=======
-=======
->>>>>>> parent of faabe62... Merge branch 'master' of https://github.com/FlashW1W/TalkALot:Register.php
 ﻿<?php 
 function queryTIPO(){
     $db = mysqli_connect('localhost', 'root', '', 'lrm_v2');
@@ -45,23 +33,9 @@ function queryCURSO(){
 
 
 
->>>>>>> parent of 283a2ac... Recovery 04/01/2018
 ?>
 <?php include('phpregister.php') ?>
 <html>
-<<<<<<< HEAD:Register.html
-<<<<<<< HEAD
-=======
-﻿<html>
->>>>>>> parent of e6c86ab... texto
-=======
->>>>>>> 073b67f05bab4797c84174c0042126e3dffc15f0:Register.php
->>>>>>> parent of 283a2ac... Recovery 04/01/2018
-=======
->>>>>>> parent of faabe62... Merge branch 'master' of https://github.com/FlashW1W/TalkALot:Register.php
-=======
-﻿<html>
->>>>>>> parent of e6c86ab... texto:Register.html
 <head>    
     <meta charset="utf-8" />
     <title>Register Page</title>
@@ -96,29 +70,8 @@ function queryCURSO(){
 
             <div style = "margin:5px">
 
-<<<<<<< HEAD:Register.php
-<<<<<<< HEAD:Register.html
-<<<<<<< HEAD
-<<<<<<< HEAD
-             <form action = "Register.php" method = "post">
-=======
-             <form action = "login.php" method = "post">
->>>>>>> parent of e6c86ab... texto
-=======
-<<<<<<< HEAD:Register.html
-             <form action = "login.php" method = "post">
-=======
              <form action = "register.php" method = "post">
               <?php include('errors.php'); ?>
->>>>>>> 073b67f05bab4797c84174c0042126e3dffc15f0:Register.php
->>>>>>> parent of 283a2ac... Recovery 04/01/2018
-=======
-             <form action = "register.php" method = "post">
-              <?php include('errors.php'); ?>
->>>>>>> parent of faabe62... Merge branch 'master' of https://github.com/FlashW1W/TalkALot:Register.php
-=======
-             <form action = "login.php" method = "post">
->>>>>>> parent of e6c86ab... texto:Register.html
                 <table>
                     <tr>
                       <td>
@@ -130,24 +83,13 @@ function queryCURSO(){
                     </tr>
                     <tr>
                         <td>
-                            <input type = "text" name = "uname" class = "box"/>     
+                            <input type = "text" name = "idnumb" class = "box"/>     
                         </td> 
                         <td>
-<<<<<<< HEAD:Register.php
                             <input type = "Date" name = "datanas"  value="" class = "box" style="width:206px;height:41px;font-size:18px;border:1px solid #ccc;" />
                         </td>
                         <td>
                             <?php queryCURSO    (); ?>  
-=======
-                            <input type = "password" name = "psw" class = "box" />
-                        </td>
-                        <td>
-                            <select>
-                              <option value="">PWDAM</option>
-                              <option value="">QAA</option>
-                              <option value="">Outra coisa</option>
-                          </select>
->>>>>>> parent of e6c86ab... texto:Register.html
                       </td>
                   </tr>
                   <tr>
@@ -157,12 +99,18 @@ function queryCURSO(){
                     <td>
                         <label>Email</label>
                     </td>
+                                        <td>
+                        <label>Password</label>
+                    </td>
                 </tr>
                 <tr>
                     <td>
                         <input type = "text" name = "uname" class = "box"/>  
                     </td>    
                     <td> 
+                        <input type = "text" name = "email" class = "box" />
+                    </td>
+                                        <td> 
                         <input type = "password" name = "psw" class = "box" />
                     </td>
                     <tr>
@@ -175,7 +123,6 @@ function queryCURSO(){
                 </tr>
                 <tr>
                   <td>
-<<<<<<< HEAD:Register.php
                     <input type = "text" name = "name" class = "box" />  
                 </td>
                 <td> 
@@ -183,19 +130,6 @@ function queryCURSO(){
               </td>
               <td> 
                 <input type = "submit" value = "Submit" class="actionbutton" name="reg_user" style="float:right"/><br /><br><br> </td>
-=======
-                    <input type = "text" name = "uname" class = "box"/>  
-                </td>
-                <td> 
-                    <select>
-                      <option value="">Aluno</option>
-                      <option value="">Docente</option>
-                      <option value="">Professor</option>
-                  </select>
-              </td>
-              <td> 
-                <input type = "submit" value = " Submit" style="border-radius:3px;background-color:green;color:white;height:20px;width:80px;border-decoration:none;"/><br /><br><br> </td>
->>>>>>> parent of e6c86ab... texto:Register.html
             </tr>
         </table>
     </form>
