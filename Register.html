@@ -1,4 +1,45 @@
+<<<<<<< HEAD:Register.html
 ﻿<html>
+=======
+﻿<?php 
+function queryTIPO(){
+    $db = mysqli_connect('localhost', 'root', '', 'lrm_v2');
+
+    $sql = "SELECT tip_uti_descricao FROM tipo_utilizador";
+    $result = mysqli_query($db, $sql);;
+    
+    echo "<select name='cargo'>";
+    echo "<option></option>";
+    while ($row = mysqli_fetch_array($result)) {
+        echo "<option value='" . $row['tip_uti_descricao'] ."'>" . $row['tip_uti_descricao'] ."</option>";
+    }
+    echo "</select>";
+
+}
+
+function queryCURSO(){
+    $db = mysqli_connect('localhost', 'root', '', 'lrm_v2');
+
+    $sql = "SELECT cur_nome FROM curso ORDER BY cur_id";
+    $result = mysqli_query($db, $sql);
+    
+    
+    echo "<select name='curso'> ";
+    echo "<option></option>";
+    while ($row = mysqli_fetch_array($result)) {
+
+        echo "<option value='" . $row['cur_nome'] ."'>" . $row['cur_nome'] ."</option>";
+    }
+    echo "</select>";
+
+}
+
+
+
+?>
+<?php include('phpregister.php') ?>
+<html>
+>>>>>>> 073b67f05bab4797c84174c0042126e3dffc15f0:Register.php
 <head>    
     <meta charset="utf-8" />
     <title>Register Page</title>
@@ -23,7 +64,12 @@
 
             <div style = "margin:10px">
 
+<<<<<<< HEAD:Register.html
              <form action = "login.php" method = "post">
+=======
+             <form action = "register.php" method = "post">
+              <?php include('errors.php'); ?>
+>>>>>>> 073b67f05bab4797c84174c0042126e3dffc15f0:Register.php
                 <table>
                     <tr>
                       <td>
@@ -35,9 +81,10 @@
                     </tr>
                     <tr>
                         <td>
-                            <input type = "text" name = "uname" class = "box"/>     
+                            <input type = "text" name = "idnumb" class = "box"/>     
                         </td> 
                         <td>
+<<<<<<< HEAD:Register.html
                             <input type = "password" name = "psw" class = "box" />
                         </td>
                         <td>
@@ -46,6 +93,12 @@
                               <option value="">QAA</option>
                               <option value="">Outra coisa</option>
                           </select>
+=======
+                            <input type = "Date" name = "datanas"  value="" class = "box" style="width:206px;height:41px;font-size:18px;border:1px solid #ccc;" />
+                        </td>
+                        <td>
+                            <?php queryCURSO    (); ?>  
+>>>>>>> 073b67f05bab4797c84174c0042126e3dffc15f0:Register.php
                       </td>
                   </tr>
                   <tr>
@@ -55,12 +108,18 @@
                     <td>
                         <label>Email</label>
                     </td>
+                                        <td>
+                        <label>Password</label>
+                    </td>
                 </tr>
                 <tr>
                     <td>
                         <input type = "text" name = "uname" class = "box"/>  
                     </td>    
                     <td> 
+                        <input type = "text" name = "email" class = "box" />
+                    </td>
+                                        <td> 
                         <input type = "password" name = "psw" class = "box" />
                     </td>
                     <tr>
@@ -73,6 +132,7 @@
                 </tr>
                 <tr>
                   <td>
+<<<<<<< HEAD:Register.html
                     <input type = "text" name = "uname" class = "box"/>  
                 </td>
                 <td> 
@@ -84,6 +144,15 @@
               </td>
               <td> 
                 <input type = "submit" value = " Submit" style="border-radius:3px;background-color:green;color:white;height:20px;width:80px;border-decoration:none;"/><br /><br><br> </td>
+=======
+                    <input type = "text" name = "name" class = "box" />  
+                </td>
+                <td> 
+                <?php queryTIPO(); ?> 
+              </td>
+              <td> 
+                <input type = "submit" value = "Submit" class="actionbutton" name="reg_user" style="float:right"/><br /><br><br> </td>
+>>>>>>> 073b67f05bab4797c84174c0042126e3dffc15f0:Register.php
             </tr>
         </table>
     </form>
