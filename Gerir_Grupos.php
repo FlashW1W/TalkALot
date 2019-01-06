@@ -1,7 +1,12 @@
 ﻿<?php
 session_start();
 
-function groupName(){
+class code {
+
+  private static $groupid = "";
+  private static $groupname = "";
+
+  public static function groupName(){
     $db = mysqli_connect('localhost', 'root', '', 'lrm_v2');
 
     $username = $_SESSION['myusername'];
@@ -21,7 +26,34 @@ function groupName(){
     $rowgroupname = mysqli_fetch_array($resgroupname);
     $groupname = $rowgroupname['grup_nome'];
 
-    echo "<button style='border-radius:13px'>".$groupname."</button>";
+    $groupidquery = "SELECT grup_nome FROM grupo WHERE id_grupo IN (SELECT gru_uti_id_grupo FROM grupo_utilizador WHERE gru_uti_id_utilizador = '$userid')";
+    $resgroupid = mysqli_query($db, $groupidquery);
+    while ($row = mysqli_fetch_array($resgroupid)) {
+        echo "<Button style='border-radius:13px' id=". $row['grup_nome'] ." onclick='Members()' value='" . $row['grup_nome'] ."'>" . $row['grup_nome'] ."</Button>";
+    }
+
+    self::$groupid = $groupid;
+    self::$groupname = $groupname;
+}
+
+  public static function echoName(){
+    echo self::$groupname;
+}
+
+  public static function groupMembers(){
+    $db = mysqli_connect('localhost', 'root', '', 'lrm_v2');
+
+    $groupid = self::$groupid;
+
+    $memberquery = "SELECT uti_username FROM utilizador WHERE id_utilizador IN (SELECT gru_uti_id_utilizador FROM grupo_utilizador WHERE gru_uti_id_grupo = '$groupid')";
+    $resmember = mysqli_query($db, $memberquery);
+    while ($row = mysqli_fetch_array($resmember)) {
+        echo "<Button style='border-radius:13px' value='" . $row['uti_username'] ."'>" . $row['uti_username'] ."</Button>";
+    }
+}
+
+
+
 
 }
 ?>
@@ -76,6 +108,13 @@ ul {
   }
       </style>
 
+
+      <script type="text/javascript">
+        function Members() {
+  document.getElementById("Members").style.visibility = "visible";
+}
+        
+      </script>
    </head>
 
    <body bgcolor = "#FFFFFF">
@@ -90,25 +129,18 @@ ul {
             
             <div style = "margin:30px; margin-top: 0px">
 
-<?php groupName(); ?> 
+              <?php code::groupName(); ?> 
 
             </div>
 
          </div>
 
-                  <div class="head animated fadeIn" style = "width:400px;background-color:white;color:black;border-radius:13px;" align = "center">
-            <div style = "padding:3px;"><b style="font-size:19px">Login</b></div>
+          <div class="head animated fadeIn" style = "width:400px;background-color:white;color:black;border-radius:13px;visibility: hidden;" align = "center" id="Members">
+            <div style = "padding:3px;"><b style="font-size:19px">Membros de <?php code::echoName(); ?></b></div>
             
-            <div style = "margin:30px">
+            <div style = "margin:30px; margin-top: 0px">
 
-               <form action = "../TALKALOT/PHP/login.php" method = "post">
-                  <label  class = "animated fadeInUp">UserName  :</label><input type = "text" name = "uname" class = "box animated fadeInUp"/><br /><br />
-                  <label class = "animated fadeInUp">Password  :</label><input type = "password" name = "psw" class = "box animated fadeInUp" /><br/><br /><br />
-                  <input type="Button" value = " Voltar" class="actionbutton animated fadeInLeft" style=" background-color: red;float:left;"/>
-                  <input type = "submit" value = " Iniciar Sessao" class="actionbutton animated fadeInRight" style=" background-color: #4CAF50;float:right;"/><br /><br><br>
-               </form>
-
-
+               <?php code::groupMembers(); ?> 
 
             </div>
 
