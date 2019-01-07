@@ -2,15 +2,7 @@
 session_start();
 
 //Variaveis
-$idnumber = "";
-$datanascimento = "";
-$curso = "";
-$password = "";
-$username = "";
-$email = "";
-$name = "";
-$cargo = "";
-$errors = array(); 
+
 
 //Conexão a Base de Dados
 $db = mysqli_connect('localhost', 'root', '', 'lrm_v2');
@@ -101,24 +93,23 @@ if (is_numeric($idnumber)) {}
   if (count($errors) == 0) {
 
     $querycurid = "SELECT cur_id FROM curso WHERE cur_nome = '$curso'";
-    $curid = mysql_query($querycurid);
+    $resultcurid = mysqli_query($querycurid);
+    $rscurid = mysqli_fetch_array($resultcurid);
+    $curid = $rscurid['cur_id'];
 
-    $querytipouti = "SELECT id_tipo_utilizador FROM tipo_utilizador WHERE tip_uti_descricao = '$cargo'";
-    $tipouti = mysql_query($querytipouti);
-
-    $queryutiid = "SELECT max(id_utilizador) FROM utilizador";
-    $utiid = mysql_query($queryutiid);
+    $querytipouti = "SELECT 'id_tipo_utilizador' FROM 'tipo_utilizador' WHERE 'tip_uti_descricao' = '$cargo'";
+    $result = mysqli_query($db, $querytipouti);
+    $tipouti = mysqli_fetch_assoc($result);
 
   	$query = "INSERT INTO login (username, password) 
   			  VALUES('$username', '$password')";
 
-    $queryutilizador = "INSERT INTO utilizador (id_utilizador,uti_username,uti_id_tipo_utilizador) 
-    VALUES( '' , '$username','$tipouti' )";
+    $queryutilizador = "INSERT INTO utilizador (id_utilizador, uti_username, uti_id_tipo_utilizador) 
+    VALUES( '' , '$username','$tipouti')";
 
-  	$queryaluno = "INSERT INTO aluno (alu_id,alu_id_utilizador, alu_nome, alu_email, alu_data_dnsc, alu_cur_id) 
+  	$queryaluno = "INSERT INTO aluno (alu_id, alu_id_utilizador, alu_nome, alu_email, alu_data_dnsc, alu_cur_id) 
           VALUES('$idnumber','$utiid','$name', '$email', '$datanascimento', '$curid')";
           
-    
   	$queryprofessor = "INSERT INTO professor (prof_id, prof_id_utilizador,prof_nome, prof_email, prof_data_dnsc) 
   			  VALUES('$idnumber', '$utiid', '$name', '$email', '$datanascimento')";
 

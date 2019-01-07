@@ -1,13 +1,29 @@
-﻿<!DOCTYPE html>
+﻿<?php
+session_start();
+?>
+<?php
+
+print_r($_SESSION);
+?>
+
+<!DOCTYPE html>
+
 <html>
+
 <head>
     <meta charset="utf-8" />
     <title>Mediateca</title>
     <link rel="stylesheet" type="text/css" href="../TalkALot/CSS/Index.css">
     <link rel="stylesheet" type="text/css" href="../TalkALot/CSS/Animate.css">
-    <link rel="stylesheet" type="text/css" href="../TalkALot/CSS/SideMenu.css">
     <script src="../TalkALot/JS/Index.js"></script>
-    <script src="../TalkALot/JS/SideMenu.js"></script>
+ 
+<style>
+    p{
+
+        vertical-align: 50%;
+    }
+
+</style>
 
 </head>
 <body>
@@ -22,10 +38,11 @@
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <a href="../TalkALot/Reservas.html">Reservas</a>
+                <a href="../TalkALot/Gerir_Grupos.php">Gerir Grupos</a>
                 <a onclick="">Grupos</a>
                 <a onclick="">Perfil</a>
                 <a onclick="">Minhas Reservas</a>
-                <a href="../TalkALot/Ajuda.html">Ajuda</a>
+                <a onclick="">Ajuda</a>
             </div>
 
             <span style="font-size:40px;cursor:pointer;float:right;margin-right:10px;color:white" onclick="openNav()">&#9776; </span>

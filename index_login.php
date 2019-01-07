@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <html>
 <link rel="stylesheet" type="text/css" href="../TalkALot/CSS/Index.css">
 <link rel="stylesheet" type="text/css" href="../TalkALot/CSS/Animate.css">
@@ -29,7 +33,7 @@
 ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 0k;
     overflow: hidden;
 
   }

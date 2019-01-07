@@ -3,6 +3,8 @@ session_start();
 
 $username = $_POST['uname'];
 $password = $_POST['psw'];
+$_SESSION['myusername']=$_POST['uname'];
+
 $mysql_db_hostname = "localhost";
 $mysql_db_user = "root";
 $mysql_db_password = "";
