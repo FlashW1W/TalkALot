@@ -38,7 +38,7 @@ print_r($_SESSION);
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <a href="../TalkALot/Reservas.html">Reservas</a>
-                <a href="../TalkALot/Gerir_Grupos.php">Gerir Grupos</a>
+                <a href="../TalkALot/GerirGrupos.php">Gerir Grupos</a>
                 <a onclick="">Grupos</a>
                 <a onclick="">Perfil</a>
                 <a onclick="">Minhas Reservas</a>

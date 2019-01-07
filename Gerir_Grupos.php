@@ -1,60 +1,29 @@
 ﻿<?php
 session_start();
 
-class code {
-
-  private static $groupid = "";
-  private static $groupname = "";
-
-  public static function groupName(){
+  function groupMembers(){
     $db = mysqli_connect('localhost', 'root', '', 'lrm_v2');
-
     $username = $_SESSION['myusername'];
 
-    $useridquery = "SELECT id_utilizador FROM utilizador WHERE uti_username = '$username'";
-    $resuserid = mysqli_query($db, $useridquery);
-    $rowuserid = mysqli_fetch_array($resuserid);
-    $userid = $rowuserid['id_utilizador'];
+    $groupname = $_GET['groupname'];
 
-    $groupidquery = "SELECT gru_uti_id_grupo FROM grupo_utilizador WHERE gru_uti_id_utilizador = '$userid'";
+    $groupidquery = "SELECT id_grupo FROM grupo WHERE grup_nome = '$groupname'";
     $resgroupid = mysqli_query($db, $groupidquery);
     $rowgroupid = mysqli_fetch_array($resgroupid);
-    $groupid = $rowgroupid['gru_uti_id_grupo'];
-
-    $groupnamequery = "SELECT grup_nome FROM grupo WHERE id_grupo = '$groupid'";
-    $resgroupname = mysqli_query($db, $groupnamequery);
-    $rowgroupname = mysqli_fetch_array($resgroupname);
-    $groupname = $rowgroupname['grup_nome'];
-
-    $groupidquery = "SELECT grup_nome FROM grupo WHERE id_grupo IN (SELECT gru_uti_id_grupo FROM grupo_utilizador WHERE gru_uti_id_utilizador = '$userid')";
-    $resgroupid = mysqli_query($db, $groupidquery);
-    while ($row = mysqli_fetch_array($resgroupid)) {
-        echo "<Button style='border-radius:13px' id=". $row['grup_nome'] ." onclick='Members()' value='" . $row['grup_nome'] ."'>" . $row['grup_nome'] ."</Button>";
-    }
-
-    self::$groupid = $groupid;
-    self::$groupname = $groupname;
-}
-
-  public static function echoName(){
-    echo self::$groupname;
-}
-
-  public static function groupMembers(){
-    $db = mysqli_connect('localhost', 'root', '', 'lrm_v2');
-
-    $groupid = self::$groupid;
+    $groupid = $rowgroupid['id_grupo'];
 
     $memberquery = "SELECT uti_username FROM utilizador WHERE id_utilizador IN (SELECT gru_uti_id_utilizador FROM grupo_utilizador WHERE gru_uti_id_grupo = '$groupid')";
     $resmember = mysqli_query($db, $memberquery);
     while ($row = mysqli_fetch_array($resmember)) {
-        echo "<Button style='border-radius:13px' value='" . $row['uti_username'] ."'>" . $row['uti_username'] ."</Button>";
+        echo "<Button ondblclick='showButton(" . $row['uti_username'] .")' style='border-radius:13px' value='" . $row['uti_username'] ."'>" . $row['uti_username'] ."</Button>";
+        echo "<b id='". $row['uti_username'] ."' style='font-size:19px; display:none'>Pretende remover " . $row['uti_username'] ."?</b>
+        <Button id='". $row['uti_username'] ."' style='border-radius:13px; display:none'>Sim</Button><Button id='". $row['uti_username'] ."' style='border-radius:13px; display:none'>Não</Button>";
     }
 }
 
-
-
-
+  function echoGroup(){
+    $groupname = $_GET['groupname'];
+    echo $groupname;
 }
 ?>
 <html>
@@ -62,90 +31,94 @@ class code {
 <link rel="stylesheet" type="text/css" href="../TalkALot/CSS/Animate.css">
    <head>
       <title>Gerir Grupos</title>
-
       <style type = "text/css">
          body {
             font-family:Arial, Helvetica, sans-serif;
             font-size:14px;
          }
-         label {
-            font-weight:bold;
-            width:100px;
-            font-size:14px;
-         }
-         .box {
-            border:#666666 solid 1px;
-         }
-         .actionbutton {
-   border: none;
-  color: white;
-  padding: 8px 15px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-}
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-
-  }
-  
-  li {
-    float: right;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size:16pt;
-  }
-  
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
       </style>
-
-
       <script type="text/javascript">
-        function Members() {
-  document.getElementById("Members").style.visibility = "visible";
-}
-        
+        function showButton(name) {
+          document.getElementById("demo").innerHTML = name;
+            var x = document.getElementById('1');
+            if (x.style.display === 'none') {
+                x.style.display = 'block';
+            } else {
+                x.style.display = 'none';
+            }
+        } 
       </script>
    </head>
-
    <body bgcolor = "#FFFFFF">
+
+<p id="demo">1</p>
+
    <div class="bg">
    <img src="../TalkALot/Images/logo-ESTS.png" class="animated fadeIn" id="logo">
-   
  
-
+      <div align="center">
+           <b style="font-size:42px;font-family: Verdana, Geneva, Tahoma, sans-serif;color: white;text-shadow: 2px 2px 4px #000000" >Mediateca</b><br><br>
+           <b  style="font-size:14px;font-family: Verdana, Geneva, Tahoma, sans-serif;color: white;text-shadow: 2px 2px 4px #000000">Library Room Management</b><br><br>
 
          <div class="head animated fadeIn" style = "width:400px;background-color:white;color:black;border-radius:13px;" align = "center">
-            <div style = "padding:3px;"><b style="font-size:19px">Grupos</b></div>
-            
+            <div style = "padding:3px;"><b style="font-size:19px">Membros de <?php echoGroup() ?></b></div>
             <div style = "margin:30px; margin-top: 0px">
 
-              <?php code::groupName(); ?> 
+              <?php groupMembers(); ?> 
 
             </div>
-
          </div>
-
-          <div class="head animated fadeIn" style = "width:400px;background-color:white;color:black;border-radius:13px;visibility: hidden;" align = "center" id="Members">
-            <div style = "padding:3px;"><b style="font-size:19px">Membros de <?php code::echoName(); ?></b></div>
-            
+         <div class="head animated fadeIn" style = "width:400px;background-color:white;color:black;border-radius:13px;" align = "center">
+            <div style = "padding:3px;"><b style="font-size:19px">Adicionar membros</b></div>
             <div style = "margin:30px; margin-top: 0px">
+              <form action="" method="post">
+                <input style="border-radius: 13px" type="text" name="newMember">
+                <button style="border-radius: 13px" type="submit">Pesquisar</button>
+              </form>
+              <?php
+                if (!empty($_REQUEST['newMember'])) {
+                  $db = mysqli_connect('localhost', 'root', '', 'lrm_v2');
 
-               <?php code::groupMembers(); ?> 
+                  $newMember = mysqli_real_escape_string($db, $_REQUEST['newMember']);     
 
+                  $sql = "SELECT uti_username FROM utilizador WHERE uti_username LIKE '%".$newMember."%'"; 
+                  $r_query = mysqli_query($db, $sql); 
+
+                  while ($row = mysqli_fetch_array($r_query)){  
+                    echo "<b><a style='font-size:20px'>" .$row['uti_username']. "</a></b>
+                    <form action='' method='post'>
+                      <input style='border-radius: 13px' type='hidden' name='newMember2' value=".$row['uti_username'].">
+                      <button style='border-radius: 13px; width:100px' type='submit'>Adicionar</button>
+                    </form>";
+                  }  
+                }
+              ?>
+              <?php
+                if (!empty($_REQUEST['newMember2'])) {
+                  $db = mysqli_connect('localhost', 'root', '', 'lrm_v2');
+
+                  $newMember = mysqli_real_escape_string($db, $_REQUEST['newMember2']);
+                  $groupname = $_GET['groupname'];
+
+                  $useridquery = "SELECT id_utilizador FROM utilizador WHERE uti_username = '$newMember'";
+                  $resuserid = mysqli_query($db, $useridquery);
+                  $rowuserid = mysqli_fetch_array($resuserid);
+                  $userid = $rowuserid['id_utilizador'];
+
+                  $groupidquery = "SELECT id_grupo FROM grupo WHERE grup_nome = '$groupname'";
+                  $resgroupid = mysqli_query($db, $groupidquery);
+                  $rowgroupid = mysqli_fetch_array($resgroupid);
+                  $groupid = $rowgroupid['id_grupo'];
+
+                  $sql = "INSERT INTO grupo_utilizador (gru_uti_id_grupo, gru_uti_id_utilizador) VALUES ($groupid, $userid)"; 
+                  $r_query = mysqli_query($db, $sql);
+                  }  
+              ?>
             </div>
 
-         </div>
+         </div>         
 
+      </div>
       </div>
    </body>
 </html>
