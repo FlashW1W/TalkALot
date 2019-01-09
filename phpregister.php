@@ -30,13 +30,6 @@ if (isset($_POST['reg_user'])) {
 }
 
 //Verifica se algum campo requesitado está vazio
-if (empty($username)) { array_push($errors, "Username is required"); }
-if (empty($email)) { array_push($errors, "Email is required"); }
-if (empty($password)) { array_push($errors, "Password is required"); }
-if (empty($idnumber)) { array_push($errors, "ID Number is required"); }
-if (empty($name)) { array_push($errors, "Name is required"); }
-if (empty($curso)) { array_push($errors, "Curso is required"); }
-if (empty($cargo)) { array_push($errors, "Cargo is required"); }
 
 //Verifica se o numero de identificação é valido
 if (is_numeric($idnumber)) {}
