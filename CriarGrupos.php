@@ -73,11 +73,6 @@ ul {
         <a href="index_menu_principal.php">Menu Principal</a>
     </div>
     <span style="font-size:40px;cursor:pointer;float:right;margin-right:10px;color:white" onclick="openNav()">&#9776; </span>
-   <ul style="position:fixed;top: 0;right:0;">
-  <li><a class="active" href="../TalkALot/index_login.php">LOGIN</a></li>
-  <li><a href="#news">REGISTER</a></li>
-  </ul>
- 
 
       <div align="center">
            <b style="font-size:42px;font-family: Verdana, Geneva, Tahoma, sans-serif;color: white;text-shadow: 2px 2px 4px #000000" >Mediateca</b><br><br>
