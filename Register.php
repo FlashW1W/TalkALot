@@ -58,7 +58,8 @@ function queryCURSO(){
 </style>
 <body>
  <div class="bg">
- <div id="mySidenav" class="sidenav">
+     <img src="../TalkALot/Images/logo-ESTS.png" class="animated fadeIn" id="logo">
+     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="perfil.php">Perfil</a>
         <a href="register.php'">Registo</a>
@@ -67,14 +68,7 @@ function queryCURSO(){
         <a href="reservas.php">Minhas Reservas</a>
         <a href="index_menu_principal.php'">Menu Principal</a>
     </div>
-    <span style="font-size:40px;cursor:pointer;float:right;margin-right:10px;color:black" onclick="openNav()">&#9776; </span>
-    <h1 class="tt">Reserva das Salas</h1>
-    <br />
-    <br />
-    <br />
-
-     <img src="../TalkALot/Images/logo-ESTS.png" class="animated fadeIn" id="logo">
-
+    <span style="font-size:40px;cursor:pointer;float:right;margin-right:10px;color:white" onclick="openNav()">&#9776; </span>
      <div align="center">
      <b style="font-size:42px;font-family: Verdana, Geneva, Tahoma, sans-serif;color: white;text-shadow: 2px 2px 4px #000000" >Mediateca</b><br><br>
            <b  style="font-size:14px;font-family: Verdana, Geneva, Tahoma, sans-serif;color: white;text-shadow: 2px 2px 4px #000000">Library Room Management</b><br><br>

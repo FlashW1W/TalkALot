@@ -59,8 +59,11 @@ ul {
       $today = date("Y.m.d");                         // 03.10.01
       ?>
          <body bgcolor = "#FFFFFF">
-         
-         <div id="mySidenav" class="sidenav">
+        
+
+   <div class="bg">
+   <img src="../TalkALot/Images/logo-ESTS.png" class="animated fadeIn" id="logo">
+   <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="perfil.php">Perfil</a>
         <a href="register.php'">Registo</a>
@@ -69,15 +72,7 @@ ul {
         <a href="reservas.php">Minhas Reservas</a>
         <a href="index_menu_principal.php'">Menu Principal</a>
     </div>
-    <span style="font-size:40px;cursor:pointer;float:right;margin-right:10px;color:black" onclick="openNav()">&#9776; </span>
-    <h1 class="tt">Reserva das Salas</h1>
-    <br />
-    <br />
-    <br />
-
-   <div class="bg">
-   <img src="../TalkALot/Images/logo-ESTS.png" class="animated fadeIn" id="logo">
-   
+    <span style="font-size:40px;cursor:pointer;float:right;margin-right:10px;color:white" onclick="openNav()">&#9776; </span>
    <ul style="position:fixed;top: 0;right:0;">
   <li><a class="active" href="../TalkALot/index_login.php">LOGIN</a></li>
   <li><a href="#news">REGISTER</a></li>
