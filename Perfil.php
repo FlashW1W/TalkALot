@@ -130,7 +130,7 @@ session_start();
         <a href="index_menu_principal.php'">Menu Principal</a>
     </div>
     <span style="font-size:40px;cursor:pointer;float:right;margin-right:10px;color:black" onclick="openNav()">&#9776; </span>
-    <h1 class="tt">Reserva das Salas</h1>
+ 
     <br />
     <br />
     <br />
