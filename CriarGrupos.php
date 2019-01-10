@@ -66,8 +66,8 @@ ul {
    <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="perfil.php">Perfil</a>
-        <a href="register.php">Registo</a>
-        <a href="CriarGrupos.php">Criar Grupos</a>
+      
+   
         <a href="Gerir_Grupos.php">Gerir Grupos</a>
         <a href="reservas.php">Minhas Reservas</a>
         <a href="index_menu_principal.php">Menu Principal</a>
