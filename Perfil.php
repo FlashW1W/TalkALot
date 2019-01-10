@@ -106,7 +106,20 @@ session_start();
          }
       </style>
    </head>
-   <body bgcolor = "#FFFFFF">
+   
+
+   <div class="bg">
+   <img src="../TalkALot/Images/logo-ESTS.png" class="animated fadeIn" id="logo">
+ 
+      <div align="center">
+           <b style="font-size:42px;font-family: Verdana, Geneva, Tahoma, sans-serif;color: white;text-shadow: 2px 2px 4px #000000" >Mediateca</b><br><br>
+           <b  style="font-size:14px;font-family: Verdana, Geneva, Tahoma, sans-serif;color: white;text-shadow: 2px 2px 4px #000000">Library Room Management</b><br><br>
+
+
+         <div class="head animated fadeIn" style = "width:400px;background-color:white;color:black;border-radius:13px;" align = "center">
+            <div style = "padding:3px;"><b style="font-size:19px">Perfil</b></div>
+            <div style = "margin:30px; margin-top: 0px">
+            <body bgcolor = "#FFFFFF">
    <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="perfil.php">Perfil</a>
@@ -121,19 +134,6 @@ session_start();
     <br />
     <br />
     <br />
-
-   <div class="bg">
-   <img src="../TalkALot/Images/logo-ESTS.png" class="animated fadeIn" id="logo">
- 
-      <div align="center">
-           <b style="font-size:42px;font-family: Verdana, Geneva, Tahoma, sans-serif;color: white;text-shadow: 2px 2px 4px #000000" >Mediateca</b><br><br>
-           <b  style="font-size:14px;font-family: Verdana, Geneva, Tahoma, sans-serif;color: white;text-shadow: 2px 2px 4px #000000">Library Room Management</b><br><br>
-
-
-         <div class="head animated fadeIn" style = "width:400px;background-color:white;color:black;border-radius:13px;" align = "center">
-            <div style = "padding:3px;"><b style="font-size:19px">Perfil</b></div>
-            <div style = "margin:30px; margin-top: 0px">
-
               <?php groupName(); ?> 
 
             </div>
