@@ -51,11 +51,11 @@ session_start();
    <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="perfil.php">Perfil</a>
-        <a href="register.php'">Registo</a>
+        <a href="register.php">Registo</a>
         <a href="CriarGrupos.php">Criar Grupos</a>
-        <a href="Gerir_Grupos.php'">Gerir Grupos</a>
+        <a href="Gerir_Grupos.php">Gerir Grupos</a>
         <a href="reservas.php">Minhas Reservas</a>
-        <a href="index_menu_principal.php'">Menu Principal</a>
+        <a href="index_menu_principal.php">Menu Principal</a>
     </div>
     <span style="font-size:40px;cursor:pointer;float:right;margin-right:10px;color:white" onclick="openNav()">&#9776; </span>
       <div align="center">
