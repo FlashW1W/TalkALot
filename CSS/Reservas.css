@@ -65,10 +65,7 @@ table{
         .tableform{
            width:30%;
         }
-        .centerfields{
-           margin-left: 10px;
-           margin-right: 10px;
-        }
+        
         .bg {
             /* The image used */
             background-image: url("../Images/background.png");
