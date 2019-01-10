@@ -8,6 +8,8 @@
     <link rel="stylesheet" type="text/css" href="../TalkALot/CSS/Index.css">
     <link rel="stylesheet" type="text/css" href="../TalkALot/CSS/Animate.css">
     <script src="../TalkALot/JS/Index.js"></script>
+    <link rel="stylesheet" type="text/css" href="../TalkALot/CSS/SideMenu.css">
+<script src="../TalkALot/JS/SideMenu.js"></script>
  
 <style>
     p{

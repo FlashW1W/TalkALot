@@ -11,6 +11,8 @@ ini_set('display_errors', 0);
       <link rel="stylesheet" href="/resources/demos/style.css">
       <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
       <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      <link rel="stylesheet" type="text/css" href="../TalkALot/CSS/SideMenu.css">
+<script src="../TalkALot/JS/SideMenu.js"></script>
 
    <head>
       <title>Login Page</title>

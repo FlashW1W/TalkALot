@@ -29,6 +29,8 @@ session_start();
 <html>
 <link rel="stylesheet" type="text/css" href="../TalkALot/CSS/Index.css">
 <link rel="stylesheet" type="text/css" href="../TalkALot/CSS/Animate.css">
+<link rel="stylesheet" type="text/css" href="../TalkALot/CSS/SideMenu.css">
+<script src="../TalkALot/JS/SideMenu.js"></script>
    <head>
       <title>Gerir Grupos</title>
       <style type = "text/css">
