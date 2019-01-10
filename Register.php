@@ -41,11 +41,12 @@ function queryCURSO(){
     <title>Register Page</title>
     <link rel="stylesheet" type="text/css" href="../TalkALot/CSS/Index.css">
     <link rel="stylesheet" type="text/css" href="../TalkALot/CSS/Register.css">
+<link rel="stylesheet" type="text/css" href="../TalkALot/CSS/Animate.css">
 </head>
 <style type="text/css">
 
 }
-         .actionbutton {
+.actionbutton {
    border: none;
   color: white;
   padding: 8px 15px;
@@ -54,10 +55,35 @@ function queryCURSO(){
   display: inline-block;
   font-size: 16px;
 }
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0k;
+    overflow: hidden;
 
+  }
+  
+  li {
+    float: right;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:16pt;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
 </style>
 <body>
- 
+    <div class="bg">
+   <img src="../TalkALot/Images/logo-ESTS.png" class="animated fadeIn" id="logo">
+      <ul style="position:fixed;top: 0;right:0;">
+  <li><a class="active" href="../TalkALot/index_login.php">LOGIN</a></li>
+  <li><a href="../TalkALot/Register.php">REGISTER</a></li>
+  </ul>
      <div align="center">
      <b style="font-size:42px;font-family: Verdana, Geneva, Tahoma, sans-serif;color: white;text-shadow: 2px 2px 4px #000000" >Mediateca</b><br><br>
            <b  style="font-size:14px;font-family: Verdana, Geneva, Tahoma, sans-serif;color: white;text-shadow: 2px 2px 4px #000000">Library Room Management</b><br><br>
@@ -121,13 +147,15 @@ function queryCURSO(){
                 </tr>
                 <tr>
                   <td>
-                    <input type = "text" name = "name" class = "box" />  
+                    <input type = "text" name = "name" class = "box" />
                 </td>
                 <td> 
                 <?php queryTIPO(); ?> 
               </td>
               <td> 
-                <input type = "submit" value = "Submit" class="actionbutton" name="reg_user" style="float:right"/><br /><br><br> </td>
+                <input type = "submit" value = "Submit" class="actionbutton animated fadeInLeft" name="reg_user" style="float:right;margin-left: 10px;background-color: #4CAF50"/>
+                <input type="Button" value = " Voltar" class="actionbutton animated fadeInRight" onclick="location.href='index.php'" style="float:right;background-color: red"/>
+              </td>
             </tr>
         </table>
     </form>

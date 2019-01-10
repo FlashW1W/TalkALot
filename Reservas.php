@@ -3,6 +3,12 @@ session_start();
 error_reporting(0);
 ini_set('display_errors', 0);
 ?>
+<?php
+if(empty($_SESSION))
+{
+  header("Location: /index_login.php");
+}
+?>
 
 <html>
 <link rel="stylesheet" type="text/css" href="../TalkALot/CSS/Index.css">

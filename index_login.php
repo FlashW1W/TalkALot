@@ -61,7 +61,7 @@ ul {
    
    <ul style="position:fixed;top: 0;right:0;">
   <li><a class="active" href="../TalkALot/index_login.php">LOGIN</a></li>
-  <li><a href="#news">REGISTER</a></li>
+  <li><a href="../TalkALot/Register.php">REGISTER</a></li>
   </ul>
  
 
@@ -78,7 +78,7 @@ ul {
                <form action = "../TALKALOT/PHP/login.php" method = "post">
                   <label  class = "animated fadeInUp">UserName  :</label><input type = "text" name = "uname" class = "box animated fadeInUp"/><br /><br />
                   <label class = "animated fadeInUp">Password  :</label><input type = "password" name = "psw" class = "box animated fadeInUp" /><br/><br /><br />
-                  <input type="Button" value = " Voltar" class="actionbutton animated fadeInLeft" style=" background-color: red;float:left;"/>
+                  <input type="Button" value = " Voltar" class="actionbutton animated fadeInLeft" onclick="location.href='index.php'" style=" background-color: red;float:left;"/>
                   <input type = "submit" value = " Iniciar Sessao" class="actionbutton animated fadeInRight" style=" background-color: #4CAF50;float:right;"/><br /><br><br>
                </form>
 

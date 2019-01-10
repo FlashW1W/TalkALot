@@ -1,6 +1,12 @@
 <?php
 session_start();
 ?>
+<?php
+if(empty($_SESSION))
+{
+  header("Location: /index_login.php");
+}
+?>
 
 <html>
 <link rel="stylesheet" type="text/css" href="../TalkALot/CSS/Index.css">
