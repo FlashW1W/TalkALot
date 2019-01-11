@@ -21,7 +21,7 @@ if(empty($_SESSION))
 <script src="../TalkALot/JS/SideMenu.js"></script>
 
    <head>
-      <title>Login Page</title>
+      <title>Reservas</title>
       <style type = "text/css">
          body {
             font-family:Arial, Helvetica, sans-serif;

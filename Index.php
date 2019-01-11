@@ -90,19 +90,19 @@ ul {
       </div>
       <div style="background-color:#1d809f!important;padding-top: 1px;padding-bottom: 80px">
          <br>
-         <p style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-weight:bold;text-align:center;font-size:40px;color:white">Vantagens</p>
+         <p style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-weight:bold;text-align:center;font-size:40px;color:white;margin-bottom:5%;">Vantagens</p>
          <table>
             <tr>
-               <td class="circle"></td>
-               <td class="circle"></td>
-               <td class="circle"></td>
-               <td class="circle"></td>
+               <td align="center"><img src="Images/collaboration.png" width="100px" height="100px"></td>
+               <td align="center"><img src="Images/online-booking.png" width="100px" height="100px"></td>
+               <td align="center"><img src="Images/talking.png" width="100px" height="100px"></td>
+               <td align="center"><img src="Images/management.png" width="100px" height="100px"></td>
             </tr>
             <tr>
-               <td style="text-align: center;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: bold;font-size: 20px;color: white;line-height: 1.2">Organização</td>
-               <td style="text-align: center;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: bold;font-size: 20px;color: white;line-height: 1.2">Facilidade de Reservas</td>
-               <td style="text-align: center;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: bold;font-size: 20px;color: white;line-height: 1.2";>Aumento de uso das salas</td>
-               <td style="text-align: center;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: bold;font-size: 20px;color: white;line-height: 1.2">Gestão do uso das salas</td>
+               <td style="text-align: center;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: bold;font-size: 20px;color: white;">Organização</td>
+               <td style="text-align: center;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: bold;font-size: 20px;color: white;">Facilidade de Reservas</td>
+               <td style="text-align: center;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: bold;font-size: 20px;color: white;";>Aumento de uso das salas</td>
+               <td style="text-align: center;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: bold;font-size: 20px;color: white;">Gestão do uso das salas</td>
             </tr>
          </table>
       </div>

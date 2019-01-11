@@ -99,16 +99,16 @@ ul {
          <p style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-weight:bold;text-align:center;font-size:40px;color:white">Vantagens</p>
          <table>
             <tr>
-               <td class="circle"></td>
-               <td class="circle"></td>
-               <td class="circle"></td>
-               <td class="circle"></td>
+               <td align="center"><img src="../Images/collaboration.png" width="100px" height="100px"></td>
+               <td align="center"><img src="../Images/online-booking.png" width="100px" height="100px"></td>
+               <td align="center"><img src="../Images/talking.png" width="100px" height="100px"></td>
+               <td align="center"><img src="../Images/management.png" width="100px" height="100px"></td>
             </tr>
             <tr>
-               <td style="text-align: center;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: bold;font-size: 20px;color: white;line-height: 1.2">Donec</td>
-               <td style="text-align: center;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: bold;font-size: 20px;color: white;line-height: 1.2">Fermentum</td>
-               <td style="text-align: center;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: bold;font-size: 20px;color: white;line-height: 1.2";>Luctus</td>
-               <td style="text-align: center;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: bold;font-size: 20px;color: white;line-height: 1.2">Justo</td>
+               <td style="text-align: center;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: bold;font-size: 20px;color: white;">Donec</td>
+               <td style="text-align: center;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: bold;font-size: 20px;color: white;">Fermentum</td>
+               <td style="text-align: center;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: bold;font-size: 20px;color: white;";>Luctus</td>
+               <td style="text-align: center;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: bold;font-size: 20px;color: white;">Justo</td>
             </tr>
             <tr>
                <td style="text-align: center;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 15px;color: white;line-height: 1.2">Donec lorem ipsum</td>

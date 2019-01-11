@@ -53,7 +53,7 @@ session_start();
     $professornamequery = "SELECT prof_nome FROM professor WHERE prof_id = '$professorid'";
     $resprofessorname = mysqli_query($db, $professornamequery);
     $rowprofessorname = mysqli_fetch_array($resprofessorname);
-    $professorname = $rowprofessorname['alu_nome'];
+    $professorname = $rowprofessorname['prof_nome'];
 
     $professoremailquery = "SELECT prof_email FROM professor WHERE prof_id = '$professorid'";
     $resprofessoremail = mysqli_query($db, $professoremailquery);
