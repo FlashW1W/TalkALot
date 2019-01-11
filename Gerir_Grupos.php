@@ -61,7 +61,7 @@ if(empty($_SESSION))
 
 
 
-<p id="demo">1</p>
+<p style="display: none;" id="demo">1</p>
 
    <div class="bg">
    <img src="../TalkALot/Images/logo-ESTS.png" class="animated fadeIn" id="logo">
