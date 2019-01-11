@@ -68,12 +68,16 @@ ul {
     overflow: hidden;
 
   }
-  .mysqltable td{
-        width:20%;
-        align:center;
-        font-size:17px;
-        border: 1px solid black;
-        }
+  .mysqltable td, th { 
+  border: 1px solid #ddd;
+  }
+  .mysqltable {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.mysqltable th, td {
+}
   
   li {
     float: right;
@@ -156,7 +160,7 @@ $datepicker = $_POST["dayy"];
            <b  style="font-size:14px;font-family: Verdana, Geneva, Tahoma, sans-serif;color: white;text-shadow: 2px 2px 4px #000000">Library Room Management</b><br><br>
 
            <div id="wrapper">
-  <div id="left">
+  <div id="left" style="margin-left:1%;">
   <form action="Reservas.php" method="POST">
   <table border="0" class="tablecontent">
                 <tr>
@@ -235,7 +239,7 @@ echo "</select>";
   
   
   </div>    
-  <div id="right">
+  <div id="right" style="margin-right:1%;padding-right:1%;">
   <?php
 $servername = "localhost";
 $username   = "root";
@@ -288,6 +292,10 @@ if ($result->num_rows > 0) {
 
 ?> 
   </div>
+  <br><br>
+  <br><br>
+  <input type="Button" value = " Minhas Reservas" class="actionbutton animated fadeInRight" onclick="location.href='MinhasReservas.php'" style="background:green;" />
+
 </div>
          
 

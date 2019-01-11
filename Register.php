@@ -44,15 +44,20 @@ function queryCURSO(){
 <link rel="stylesheet" type="text/css" href="../TalkALot/CSS/Animate.css">
 </head>
 <style type="text/css">
-
+.button {
+  border: none;
+  color: white;
+  padding: 7px 16px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
 }
+
 .actionbutton {
    border: none;
   color: white;
-  padding: 8px 15px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
   font-size: 16px;
 }
 ul {
@@ -153,8 +158,9 @@ ul {
                 <?php queryTIPO(); ?> 
               </td>
               <td> 
-                <input type = "submit" value = "Submit" class="actionbutton animated fadeInLeft" name="reg_user" style="float:right;margin-left: 10px;background-color: #4CAF50"/>
-                <input type="Button" value = " Voltar" class="actionbutton animated fadeInRight" onclick="location.href='index.php'" style="float:right;background-color: red"/>
+                <input type = "submit" value = "Criar" class="button animated fadeInLeft" name="reg_user" style="float:right;background-color: #4CAF50;margin-left:20px;"/>
+                <input type="Button" value = " Voltar" class="button animated fadeInRight" onclick="location.href='index.php'" style="float:right;background-color: red;"/>
+
               </td>
             </tr>
         </table>

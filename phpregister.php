@@ -33,7 +33,7 @@ if (isset($_POST['reg_user'])) {
 
 //Verifica se o numero de identificação é valido
 if (is_numeric($idnumber)) {}
-	else{ array_push($errors, "ID Number is not a number"); }
+	else{ array_push($errors, ""); }
 
   // Verifica se já existe o Número de identificação(aluno)
   $user_check_query = "SELECT * FROM aluno WHERE alu_id='$idnumber' LIMIT 1";
