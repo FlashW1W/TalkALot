@@ -94,7 +94,7 @@ ul {
 
             <div style = "margin:5px">
 
-             <form action = "register.php" method = "post">
+             <form action = "phpregister.php" method = "post">
               <?php include('errors.php'); ?>
                 <table>
                     <tr>
