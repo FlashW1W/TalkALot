@@ -119,11 +119,11 @@ if(empty($_SESSION))
    <body bgcolor = "#FFFFFF">
    <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      
-        <a href="CriarGrupos.php">Criar Grupos</a>
-        <a href="Gerir_Grupos.php'">Gerir Grupos</a>
-        <a href="reservas.php">Minhas Reservas</a>
-        <a href="index_menu_principal.php'">Menu Principal</a>
+                <a href="../TalkALot/Reservas.php">Reservas</a>
+                <a href="../TalkALot/CriarGrupos.php">Criar Grupos</a>
+                <a href="../TalkALot/GerirGrupos.php">Gerir Grupos</a>
+                <a href="../TalkALot/Ajuda.html">Ajuda</a>
+        <a href="index_menu_principal.php">Menu Principal</a>
     </div>
     <span style="font-size:40px;cursor:pointer;float:right;margin-right:10px;color:white" onclick="openNav()">&#9776; </span>
    
